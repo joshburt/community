@@ -1,0 +1,55 @@
+{
+  "name": "bitcoin",
+  "description": "Installs/Configures the official Bitcoin Core",
+  "long_description": "Bitcoin Cookbook\n================\n[![Cookbook](https://img.shields.io/cookbook/v/bitcoin.svg)](https://supermarket.getchef.com/cookbooks/bitcoin)\n[![Build Status](https://travis-ci.org/infertux/chef-bitcoin.svg?branch=master)](https://travis-ci.org/infertux/chef-bitcoin)\n\nThis cookbook downloads, installs and configures Bitcoin Core as a full node.\n\nRequirements\n------------\n\n### network\nIn order to actively contribute to the Bitcoin network, you will need to open your TCP port 8333.\nThis cookbook does *not* make sure your port 8333 is open since this is very much dependant on your networking setup.\n\nUsage\n-----\n\n### `bitcoin::package` recipe\n\nConfigures repository from http://www.ringingliberty.com/bitcoin/ and installs pre-packaged binary with `bitcoin` systemd service.\n\nYou can run a Bitcoin fork/variant like this:\n\n```\n    \"bitcoin\": {\n      \"package\": {\n        \"variant\": \"classic\"\n      }\n    }\n```\n\nThe valid variants are `core` (default), `classic` and `xt`.\n\n### `bitcoin::binary` recipe\n\nDownloads the official binary from https://bitcoin.org/ and copies it along with an init.d service script.\n\n### `bitcoin::source` recipe\n\nDownloads the official release from https://github.com/bitcoin/bitcoin/releases and compiles it along with an init.d service script.\n\n\n### Comparison table\n\n|                                     | package                    | binary      | source  |\n| :---                                | :---:                      | :---:       | :---:   |\n| proper packaging                    | **yes**                    | no          | no      |\n| SELinux support                     | **yes**                    | no          | no      |\n| forks available                     | **yes**                    | no¹         | no¹     |\n| support most distributions          | only RHEL, CentOS & Fedora | **yes**     | **yes** |\n| support ARM and other architectures | only x86_64                | only x86_64 | **yes** |\n| \"official\"                          | no                         | **yes**     | **yes** |\n\n¹ No but possible, pull request welcomed.\n\nLicense\n-------\nMIT\n\n",
+  "maintainer": "Cédric Félizard",
+  "maintainer_email": "cedric@felizard.fr",
+  "license": "MIT",
+  "platforms": {
+    "centos": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "fedora": ">= 0.0.0",
+    "redhat": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "1.3.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
